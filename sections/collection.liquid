@@ -115,6 +115,7 @@
         {% endif %}
           <div class="grid-uniform{% if settings.image_autoheight_enable %} image_autoheight_enable{% endif %}">
             {% for product in collection.products %}{% if product.template_suffix != 'beans' %}
+              {% include 'bold-product' with product, hide_action: 'skip' %}
               {% include 'product-grid-item' %}
             {% else %}
               {% if collection.handle == 'all'%}
