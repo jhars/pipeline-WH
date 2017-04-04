@@ -1,4 +1,4 @@
-{% include 'bold-product' with product, hide_action: 'break' %}{% if bold_hidden_product %}{% break %}{%endif %}
+{% comment %}{% include 'bold-product' with product, hide_action: 'break' %}{% if bold_hidden_product %}{% break %}{%endif %}{% endcomment %}
 
 <div class="product-section" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product" data-image-zoom-enable="{{ section.settings.zoom_enable }}">
   {% include 'product' %}

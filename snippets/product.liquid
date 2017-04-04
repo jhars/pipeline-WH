@@ -1,3 +1,5 @@
+{% include 'bold-product' with product, hide_action: 'break' %}{% if bold_hidden_product %}{% break %}{%endif %}
+
 <!-- /snippets/product.liquid -->
 {% if product.template_suffix contains "charge-rabbit" %}
   {% assign form_action = product.metafields.charge_rabbit.subscribe_path %}
