@@ -137,6 +137,7 @@
             <select name="id" id="ProductSelect-{{ section.id }}" data-section="{{ section.id }}" class="product-form__variants no-js">
               {% for variant in product.variants %}
                 {% if variant.available %}
+                  {% include 'bold-hidden-variants' with variant, bold_loop: 'loop' %}
                   <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
                     {{ variant.title }}
                   </option>
