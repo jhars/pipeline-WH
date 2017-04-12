@@ -73,6 +73,9 @@
       {% endif %}
     </div>
 
+
+
+
     <div class="grid__item one-third medium-down--one-whole">
       <p class="h4--body">{{ 'customer.account.details' | t }}</p>
 
@@ -113,6 +116,10 @@
     </div>
 
   </div>
+
+  <!-- Bold: Loyalty Points - Step 3 -->
+  {% include 'bold-loyalties-customer-transactions' %}
+  <!-- // end bold code -->
 
   {% if paginate.pages > 1 %}
     <div class="pagination">
