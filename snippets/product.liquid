@@ -1,5 +1,3 @@
-{% include 'bold-product' with product, hide_action: 'break' %}{% if bold_hidden_product %}{% break %}{%endif %}
-
 <!-- /snippets/product.liquid -->
 {% if product.template_suffix contains "charge-rabbit" %}
   {% assign form_action = product.metafields.charge_rabbit.subscribe_path %}
@@ -137,7 +135,6 @@
             <select name="id" id="ProductSelect-{{ section.id }}" data-section="{{ section.id }}" class="product-form__variants no-js">
               {% for variant in product.variants %}
                 {% if variant.available %}
-                  {% include 'bold-hidden-variants' with variant, bold_loop: 'loop' %}
                   <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
                     {{ variant.title }}
                   </option>
@@ -251,7 +248,7 @@
 {% endif %}
 
 <script type="application/json" id="ProductJson-{{ section.id }}">
-  bold_product_json[{{ product.id }}]
+  {{ product | json }}
 </script>
 
 {% if product.template_suffix contains "charge-rabbit" %}

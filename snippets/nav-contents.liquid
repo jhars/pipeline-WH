@@ -47,7 +47,8 @@
     {% endfor %}
     <li class="cart-text-link">
       <!-- <a href="/cart" class="CartToggle"> -->
-      <a href="/cart">
+      <!-- <a href="/cart"> -->
+      <a href="http://www.google.com">
         {{ 'layout.cart.title' | t }}
         <span class="cartCost {% if cart.item_count < 1 %} hidden-count {% endif %}">(<span class="money">{{ cart.total_price | money }}</span>)</span>
       </a>
